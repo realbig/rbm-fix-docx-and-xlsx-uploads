@@ -1,6 +1,6 @@
 {
   "name": "rbm_fix_docx_and_xlsx_uploads",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.26.3",

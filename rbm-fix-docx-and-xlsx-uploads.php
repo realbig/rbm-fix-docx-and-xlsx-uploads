@@ -3,7 +3,7 @@
  * Plugin Name: RBM Fix Google-exported .docx and .xlsx Uploads
  * Plugin URI: https://github.com/realbig/rbm-fix-docx-and-xlsx-uploads
  * Description: .docx and .xlsx files that are exported from Google Docs and Google Sheets report an incorrect File MIME Type which causes WordPress to reject them on upload. This plugin accounts for this incorrect MIME Type to allow them through.
- * Version: 0.1.0
+ * Version: 1.0.0
  * Text Domain: rbm-fix-docx-and-xlsx-uploads
  * Author: Real Big Marketing
  * Author URI: https://realbigmarketing.com/
@@ -20,19 +20,19 @@ if ( ! class_exists( 'RBM_Fix_DOCX_And_XLSX_Uploads' ) ) {
     /**
      * Main RBM_Fix_DOCX_And_XLSX_Uploads class
      *
-     * @since      {{VERSION}}
+     * @since      1.0.0
      */
     final class RBM_Fix_DOCX_And_XLSX_Uploads {
         
         /**
          * @var          array $plugin_data Holds Plugin Header Info
-         * @since        {{VERSION}}
+         * @since        1.0.0
          */
         public $plugin_data;
         
         /**
          * @var          array $admin_errors Stores all our Admin Errors to fire at once
-         * @since        {{VERSION}}
+         * @since        1.0.0
          */
         private $admin_errors = array();
 
@@ -40,7 +40,7 @@ if ( ! class_exists( 'RBM_Fix_DOCX_And_XLSX_Uploads' ) ) {
          * Get active instance
          *
          * @access     public
-         * @since      {{VERSION}}
+         * @since      1.0.0
          * @return     object self::$instance The one true RBM_Fix_DOCX_And_XLSX_Uploads
          */
         public static function instance() {
@@ -85,7 +85,7 @@ if ( ! class_exists( 'RBM_Fix_DOCX_And_XLSX_Uploads' ) ) {
          * Setup plugin constants
          *
          * @access     private
-         * @since      {{VERSION}}
+         * @since      1.0.0
          * @return     void
          */
         private function setup_constants() {
@@ -124,7 +124,7 @@ if ( ! class_exists( 'RBM_Fix_DOCX_And_XLSX_Uploads' ) ) {
          * Internationalization
          *
          * @access     private 
-         * @since      {{VERSION}}
+         * @since      1.0.0
          * @return     void
          */
         private function load_textdomain() {
@@ -161,7 +161,7 @@ if ( ! class_exists( 'RBM_Fix_DOCX_And_XLSX_Uploads' ) ) {
          * Include different aspects of the Plugin
          * 
          * @access     private
-         * @since      {{VERSION}}
+         * @since      1.0.0
          * @return     void
          */
         private function require_necessities() {
@@ -187,7 +187,7 @@ if ( ! class_exists( 'RBM_Fix_DOCX_And_XLSX_Uploads' ) ) {
          * @param string|false $real_mime                 The actual mime type or false if the type cannot be determined.
          *
          * @access  public
-         * @since   {{VERSION}}
+         * @since   1.0.0
          * @return  array                                 Values for the extension, mime type, and corrected filename.
          */
         public function wp_check_filetype_and_ext( $args, $file, $filename, $mimes, $real_mime ) {
@@ -222,7 +222,7 @@ if ( ! class_exists( 'RBM_Fix_DOCX_And_XLSX_Uploads' ) ) {
          * Show admin errors.
          * 
          * @access     public
-         * @since      {{VERSION}}
+         * @since      1.0.0
          * @return     HTML
          */
         public function admin_errors() {
@@ -241,7 +241,7 @@ if ( ! class_exists( 'RBM_Fix_DOCX_And_XLSX_Uploads' ) ) {
          * Register our CSS/JS to use later
          * 
          * @access     public
-         * @since      {{VERSION}}
+         * @since      1.0.0
          * @return     void
          */
         public function register_scripts() {
@@ -298,7 +298,7 @@ if ( ! class_exists( 'RBM_Fix_DOCX_And_XLSX_Uploads' ) ) {
  * The main function responsible for returning the one true RBM_Fix_DOCX_And_XLSX_Uploads
  * instance to functions everywhere
  *
- * @since      {{VERSION}}
+ * @since      1.0.0
  * @return     \RBM_Fix_DOCX_And_XLSX_Uploads The one true RBM_Fix_DOCX_And_XLSX_Uploads
  */
 add_action( 'plugins_loaded', 'rbm_fix_docx_and_xlsx_uploads_load' );
